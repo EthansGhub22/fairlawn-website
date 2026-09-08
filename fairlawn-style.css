@@ -6,7 +6,7 @@
   --brass:#8a6d3b;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; overflow-x:hidden;}
 [id]{scroll-margin-top:24px;}
 body{
   background:#0c0a08;
@@ -291,10 +291,58 @@ footer.masthead-footer{
 
 @media (max-width: 900px){
   .layout, .page-layout{grid-template-columns:1fr;}
-  .masthead{grid-template-columns:1fr; text-align:center;}
+  .masthead{grid-template-columns:1fr; text-align:center; gap:14px;}
   .medallion{max-width:120px; margin:0 auto;}
   .logo-frame{max-width:120px; margin:0 auto;}
   .services-grid{grid-template-columns:1fr;}
   .adverts{grid-template-columns:repeat(2,1fr);}
   .gallery-row{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ---------- PHONE (≤640px) ---------- */
+@media (max-width: 640px){
+  body{padding:0;}
+  .sheet{
+    margin:8px auto; padding:18px 14px 14px; border-width:6px;
+  }
+
+  /* decorative chrome scales down instead of crowding the content */
+  .foxing{opacity:0.28;}
+  .foxing.f1, .foxing.f3{width:110px; height:110px;}
+  .foxing.f2, .foxing.f5{width:80px; height:80px;}
+  .foxing.f4{width:60px; height:60px;}
+  .corner-orn{width:38px; height:38px;}
+
+  .masthead{gap:10px; padding:4px 0 10px;}
+  .medallion, .logo-frame{max-width:82px;}
+  .medallion .cap{font-size:9px;}
+  .title-block{padding:10px 12px;}
+  .title-block .est{font-size:9.5px; letter-spacing:0.08em; line-height:1.5;}
+  .title-block .sub{font-size:15px;}
+
+  /* nav becomes a single swipeable row instead of wrapping into ragged lines */
+  .tab-bar{flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  .tab-bar a{flex:0 0 auto; font-size:10.5px; padding:9px 14px;}
+
+  /* byline items wrap and center instead of squeezing/overlapping */
+  .byline-strip{flex-wrap:wrap; justify-content:center; text-align:center; gap:4px 16px; padding:8px 10px;}
+
+  .article-head h2{font-size:clamp(26px,8vw,38px);}
+  .dept-head{font-size:19px;}
+
+  .col{padding:14px 14px;}
+  /* justified text creates ugly gaps in a narrow column — read better left-aligned */
+  .story-text p{text-align:left;}
+  .story-text p:first-of-type::first-letter{font-size:40px;}
+  .story-text.large p:first-of-type::first-letter{font-size:48px;}
+
+  .gallery-row{grid-template-columns:1fr 1fr; gap:8px;}
+  .adverts{grid-template-columns:1fr;}
+  .advert-cell{padding:12px 14px;}
+
+  .rating-badge .num{font-size:34px;}
+  .service-ad h4{font-size:22px;}
+
+  .map-embed iframe{height:180px;}
+  .catalog-embed iframe{height:460px;}
 }
