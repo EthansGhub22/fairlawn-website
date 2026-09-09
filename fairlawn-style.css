@@ -16,13 +16,15 @@ body{
 }
 .sheet{
   max-width:1220px; margin:26px auto; padding:34px 38px 24px;
-  background:var(--paper);
+  background-color:var(--paper);
   border:10px solid #0c0a08;
   position:relative;
   overflow:hidden;
   background-image:
     radial-gradient(circle at 20% 15%, rgba(0,0,0,0.05) 0, transparent 40%),
-    radial-gradient(circle at 80% 85%, rgba(0,0,0,0.06) 0, transparent 45%);
+    radial-gradient(circle at 80% 85%, rgba(0,0,0,0.06) 0, transparent 45%),
+    url("fairlawn-paper-texture.jpg");
+  background-repeat: no-repeat, no-repeat, repeat;
 }
 .sheet::before{
   content:''; position:absolute; inset:0; pointer-events:none; opacity:0.16; mix-blend-mode:multiply; z-index:2;
