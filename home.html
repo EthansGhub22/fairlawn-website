@@ -64,7 +64,7 @@
   </div>
   <div class="story-text" style="max-width:700px; margin:0 auto 6px;">
     <p>Fairlawn is Plainfield's tuxedo and suit shop &mdash; fitted in-house for weddings, prom nights, and every black-tie affair, with a full range of styles ready to <strong>rent or buy</strong>.</p>
-    <p>We also offer alterations, custom embroidery, and bridal &amp; specialty gifts &mdash; all under one roof, all finished by hand.</p>
+    <p>We also offer alterations, custom embroidery, and bridal &amp; specialty gifts &mdash; all under one roof, all finished with care.</p>
   </div>
   <a class="call-btn" style="display:block; text-align:center; max-width:320px; margin:14px auto 0;" href="services.html#rental">Rent or Buy Your Tuxedo &rarr;</a>
 
@@ -115,10 +115,10 @@
           <a class="read-more" href="services.html#alterations">Visit the Alterations Dept. &rarr;</a>
         </div>
         <div class="service-ad">
-          <span class="no">Dept. III &mdash; Fine Needlework</span>
+          <span class="no">Dept. III &mdash; Custom Embroidery</span>
           <h4>Embroidery</h4>
           <span class="tag">Hand &amp; Machine, By Design</span>
-          <p>Custom hand and machine embroidery upon elegant fabrics.</p>
+          <p>Custom machine embroidery upon elegant fabrics.</p>
           <a class="read-more" href="services.html#embroidery">Visit the Embroidery Dept. &rarr;</a>
         </div>
         <div class="service-ad">
@@ -133,12 +133,24 @@
         <div class="dept-head" style="margin-top:8px;">From the Workroom
           <div class="rule-pair"><hr class="rule thin"></div>
         </div>
-        <div class="gallery-row">
-          <div class="engraving"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop" alt="Tailoring workroom"><div class="cap">The Workroom</div></div>
-          <div class="engraving"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=600&auto=format&fit=crop" alt="Embroidery detail"><div class="cap">Fine Needlework</div></div>
-          <div class="engraving"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="Tuxedo fitting"><div class="cap">A Fine Fitting</div></div>
+        <div class="gallery-covers">
+          <button type="button" class="gallery-cover" data-gallery="tuxedo">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop" alt="Tuxedo Rental &amp; Sale">
+            <span class="cover-label">Tuxedo Rental &amp; Sale</span>
+          </button>
+          <button type="button" class="gallery-cover" data-gallery="alterations">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop" alt="Alterations">
+            <span class="cover-label">Alterations</span>
+          </button>
+          <button type="button" class="gallery-cover" data-gallery="embroidery">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=600&auto=format&fit=crop" alt="Custom Embroidery">
+            <span class="cover-label">Custom Embroidery</span>
+          </button>
+          <button type="button" class="gallery-cover" data-gallery="bridal">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop" alt="Bridal &amp; Gifts">
+            <span class="cover-label">Bridal &amp; Gifts</span>
+          </button>
         </div>
-        <div class="engraving" style="max-width:220px; margin:10px auto 0;"><img src="https://images.unsplash.com/photo-1767039362599-1b51a9c7abe8?q=80&w=600&auto=format&fit=crop" alt="Spools of thread"><div class="cap">Thread &amp; Notions</div></div>
       </div>
 
       <div class="dept-head" style="margin-top:18px;">Why Fairlawn?
@@ -227,5 +239,15 @@
     All Works &amp; Stitches — Fairlawn Fine Stitchery &amp; Tux Shoppe, Plainfield CT — Demo Concept, Not the Live Site
   </footer>
 </div>
+
+<div class="lightbox" id="workroomLightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" data-close></div>
+  <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Photo gallery">
+    <button type="button" class="lightbox-close" data-close aria-label="Close gallery">&times;</button>
+    <h3 class="lightbox-title"></h3>
+    <div class="lightbox-grid"></div>
+  </div>
+</div>
+<script src="workroom-gallery.js" defer></script>
 </body>
 </html>
